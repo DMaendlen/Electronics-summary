@@ -1,0 +1,24 @@
+	\begin{circuitikz}
+	\draw
+	(-1,2) node [ocirc] (pleft) {B}
+	(-1,-2) node [ocirc] (gleft) {E}
+	(0,2) node (rbep) {}
+	(0,0) node (rben) {}
+	(0,-2) node [circ] (uben){}
+	(2,-2) node [circ] (isn) {}
+	(2,2) node (isp) {}
+	(4,2) node [circ] (rcep) {}
+	(4,-2) node [circ] (rcen) {}
+	(5,2) node [ocirc] (pright) {C}
+	(5,-2) node [ocirc] (gright) {E}
+	(pleft) to [open, v>=$U_{\mathrm{e}}$] (gleft)
+	(gright) to [open, v=$U_{\mathrm{a}}$] (pright)
+	(pleft) to [short] (rbep)
+	(rbep) to [R=$r_{\mathrm{BE}}$] (rben)
+	(rben) to [voltage source, v=$U_{\mathrm{S}}$] (uben)
+	(gleft) to [short] (gright)
+	(isp) to [current source, i=$\beta\cdot I_{\mathrm{B}}$] (isn)
+	(isp) to [short] (pright)
+	(rcep) to [R=$r_{\mathrm{CE}}$] (rcen)
+	;
+	\end{circuitikz}

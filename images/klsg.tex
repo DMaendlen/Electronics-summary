@@ -1,0 +1,38 @@
+	\begin{circuitikz}
+	\draw
+	(-2,2) node [ocirc] (pleft) {B}
+	(-2,-2) node [ocirc] (gndleft) {E}
+	(-1,2) node [circ] (R1p) {}
+	(-1,-2) node [circ] (R1n) {}
+	(0,2) node [circ] (R2p) {}
+	(0,-2) node [circ] (R2n) {}
+	(1,2) node [circ] (rbep) {}
+	(1,0) node  (rben) {}
+	(2,0) node [circ] (REp) {}
+	(2,-2) node [circ] (REn) {}
+	(3,0) node [circ] (CEp) {}
+	(3,-2) node [circ] (CEn){}
+	(4,2) node [circ] (Isp) {}
+	(4,0) node  (Isn) {}
+	(5,2) node [circ] (rCEp) {}
+	(5,-2) node [circ] (rCEn){}
+	(6,2) node [circ] (RCp) {}
+	(6,-2) node [circ] (RCn) {}
+	(7,2) node [ocirc] (pright) {C}
+	(7,-2) node [ocirc] (gndright) {E}
+	(pleft) to [open, v>=$U_{\mathrm{e}}$] (gndleft)
+	(pleft) to [short] (rbep)
+	(gndleft) to [short] (gndright)
+	(rben) to [short] (Isn)
+	(Isp) to [short] (pright)
+	(gndright) to [open, v=$U_{\mathrm{a}}$] (pright)
+	(R1n) to [R=$R_1$] (R1p)
+	(R2n) to [R=$R_2$] (R2p)
+	(rben) to [R=$r_{\mathrm{BE}}$] (rbep)
+	(REn) to [R=$R_{\mathrm{E}}$] (REp)
+	(CEp) to [C=$C_{\mathrm{E}}$] (CEn)
+	(Isn) to [current source, i<=$\beta\cdot I_{\mathrm{B}}$] (Isp)
+	(rCEn) to [R=$r_{\mathrm{CE}}$] (rCEp)
+	(RCp) to [R=$R_{\mathrm{C}}$] (RCn)
+	;
+	\end{circuitikz}

@@ -1,0 +1,40 @@
+\section{Dioden}
+	\subsection{Strom und Spannung}
+		\begin{align*}
+			I&=I_{R0}\cdot\left(e^{\frac{U}{mU_T}}-1\right) 
+			& U&=mU_T\cdot\ln\left(\frac{I}{I_{R0}}+1\right) 
+			& U\approx mU_T\cdot\ln\left(\frac{I}{I_{R0}}\right)+I\cdot R_{\mathrm{B}}
+		\end{align*}
+
+		\begin{table}[h]
+		\begin{tabular}{ll}
+		$U_{\mathrm{T}}\dots$ Temperaturspannung & $R_{\mathrm{B}}\dots$ Bahnwiderstand\\
+		$I_{\mathrm{R}0}\dots$ Sättigungsstrom& $m\dots$ Vorfaktor (meistens 1)\\
+		\end{tabular}
+		\end{table}
+
+	\subsection{Zenerdiode}
+		\begin{align*}
+			TK_{\mathrm{U}}&=\frac{\mathrm{d}U_{Z0}}{\mathrm{d}T}\cdot\frac{1}{U_{Z0}}
+			& S^*&=S\cdot\frac{U_{\mathrm{A}}}{U_{\mathrm{E}}}
+			& G&=S=\frac{\Delta U_{\mathrm{E}}}{\Delta U_{\mathrm{A}}}=1+\frac{R_{\mathrm{v}}}{r_{\mathrm{Z}}}+\frac{R_{\mathrm{v}}}{R_{\mathrm{L}}}
+		\end{align*}
+
+		\begin{table}[h]
+		\begin{tabular}{ll}
+		$TK_{\mathrm{U}}\dots$ Temperaturkoeffizient der Zenerspannung & $U_{Z0}\dots$ Zenerspannung\\
+		$S^*\dots$ Stabilisierungsfaktor & $G=S\dots$ Glättungsfaktor\\
+		\end{tabular}
+		\end{table}
+
+		\subsubsection{Widerstand}
+			\begin{align*}
+				R_{\mathrm{th}}&=\frac{\Delta T}{P} & r_{z\mathrm{th}}&=TK_{\mathrm{U}}\cdot U_{Z0}^2\cdot R_{\mathrm{th}}
+			\end{align*}
+
+			\begin{table}[h]
+			\begin{tabular}{ll}
+			$R_{\mathrm{th}}\dots$ Thermischer Widerstand & $r_{z\mathrm{th}}\dots$ Temperaturbedingter Zusatzwiderstand der Zenerdiode\\
+			\end{tabular}
+			\end{table}
+		\clearpage
